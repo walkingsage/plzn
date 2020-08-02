@@ -13,7 +13,7 @@ header {
   height: 100vh; }
   header .header__content {
     display: grid;
-    grid-template-rows: 99px auto; }
+    grid-template-rows: 133px auto; }
     header .header__content nav {
       display: grid;
       grid-template-columns: 41.0656620022% 10.7104413348% 41.0656620022%;
@@ -109,5 +109,8 @@ header {
           border-color: #9CCCD0; }
           header .header__content .header__main .left .button:hover p {
             color: #9CCCD0; }
+      header .header__content .header__main .right {
+        display: grid;
+        grid-template-columns: 5.3097345133% 80.7079646018% 5.3097345133%; }
 
 /*# sourceMappingURL=style.css.map */
