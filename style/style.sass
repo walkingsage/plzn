@@ -12,10 +12,11 @@
 
 header
     background: linear-gradient(178.88deg, rgba(3, 3, 3, 0.42) -2.92%, rgba(255, 255, 255, 0) 118.38%), #000000
-    max-height: 100vh
+    height: 100vh
 
     .header__content
         display: grid
+        grid-template-rows: 99px auto
 
         nav
             display: grid
@@ -36,7 +37,7 @@ header
                         text-decoration: none
                         color: #ffffff
                         +mons
-                        +regular
+                        +sbold
                         font-size: 18px
                         text-align: center
                         align-self: center
@@ -63,16 +64,20 @@ header
         .header__main
             align-self: end
             display: grid
-            grid-template-columns: 632px/1858px*100% 432px/1858px*100% 632px/1858px*100% 
+            grid-template-columns: 565px/1858px*100% 432px/1858px*100% 565px/1858px*100% 
+            grid-column-gap: 148px
 
             img
                 max-width: 100%
+                align-self: end
+                justify-self: center
 
             .left
                 display: grid
                 grid-template-rows: 343px 80px
                 grid-row-gap: 100px
                 align-self: center
+                padding-left: 50px
 
                 .left__top
                     display: grid
@@ -97,6 +102,38 @@ header
                             font-size: 24px/16px*1em
                             color: #898A88
                             text-transform: uppercase
+
+                    p
+                        +oran
+                        +regular
+                        font-size: 30px/16px*1em
+                        color: #BEBEBE
+                        align-self: center
+                        text-align: left
+
+                .button
+                    height: 100%
+                    width: 400px/487px*100%
+                    justify-self: start
+                    border: 1px solid #FFFFFF
+                    border-radius: 50px
+                    display: grid
+                    text-decoration: none
+
+                    p
+                        align-self: center
+                        text-align: center
+                        text-transform: uppercase
+                        +mons
+                        +sbold
+                        font-size: 22px
+                        color: #ffffff
+                
+                .button:hover
+                    border-color: #9CCCD0
+
+                    p
+                        color: #9CCCD0
 
 
                     
