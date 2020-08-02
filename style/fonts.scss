@@ -1,0 +1,16 @@
+
+@mixin mons {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin oran {
+    font-family: 'Oranienbaum', serif;
+}
+
+@mixin regular {
+    font-weight: 400;
+}
+
+@mixin sbold {
+    font-weight: 600;
+}

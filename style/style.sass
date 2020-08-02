@@ -1,0 +1,43 @@
+@import fonts
+
+*
+    margin: 0
+    padding: 0
+
+.container  
+    width: 1878px/1920px*100%
+    padding: 0 10px 0 10px
+    margin: 0 auto
+
+header
+    background: linear-gradient(178.88deg, rgba(3, 3, 3, 0.42) -2.92%, rgba(255, 255, 255, 0) 118.38%), #000000
+    
+
+    .header__content
+        display: grid
+
+        nav
+            display: grid
+            grid-template-columns: 763px/1858px*100% 199px/1858px*100% 763px/1858px*100%
+            grid-template-rows: 97px 2px
+            grid-column-gap: 67px/1858px*100%
+            padding-top: 21px
+
+            ul
+                display: grid
+                grid-template-columns: repeat(4,1fr)
+
+                a
+                    text-decoration: none
+                    color: #ffffff
+                    +mons
+                    +regular
+                    font-size: 28px
+                    text-align: center
+                    
+
+                a:hover
+                    color: #9CCCD0
+
+            
+
