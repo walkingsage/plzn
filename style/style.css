@@ -111,6 +111,9 @@ header {
             color: #9CCCD0; }
       header .header__content .header__main .right {
         display: grid;
-        grid-template-columns: 5.3097345133% 80.7079646018% 5.3097345133%; }
+        grid-template-columns: 5.3097345133% 80.7079646018% 5.3097345133%;
+        align-items: center; }
+        header .header__content .header__main .right .fa {
+          color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */
