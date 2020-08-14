@@ -1,4 +1,10 @@
+@mixin code {
+    font-family: 'Source Code Pro', monospace;
+}
 
+@mixin mons {
+    font-family: 'Montserrat', sans-serif;
+}
 
 @mixin regular {
     font-weight: 400;
