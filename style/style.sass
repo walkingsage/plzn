@@ -10,37 +10,89 @@
     padding-right: 10px
     margin: 0 auto
 
+.bold
+    +sbold
+
+.active
+    color: #00FFE5 !important
+
 body
     +code
 
     .header
         position: relative
         height: 100vh
+        display: grid
+        grid-template-columns: 50% 50%
+        background: #000000
 
         .header__nav
             background-color: rgba(0, 0, 0, 0.5)
-            height: 80px
+            height: 60px
             position: fixed
             width: 100%
+            z-index: 100
 
             .nav__content
                 display: grid
                 grid-template-columns: 50% 50%
                 align-items: center
-                margin-top: 10px
+                margin-top: 5.5px
                 
                 img
-                    max-width: 130px
-
+                    max-width: 100px
+                    
                 nav
                     ul
                         list-style: none
                         display: grid
                         grid-template-columns: repeat(4,1fr)
-                        text-align: right
+                        text-align: center
                         text-transform: uppercase
 
                         a
                             text-decoration: none
                             color: #ffffff
                             +regular
+                            font-size: 15px/16px*1em
+
+                        a:hover
+                            color: #00FFE5
+
+        a
+            display: grid
+            text-decoration: none
+            .fitnes__to,.food__to
+                display: none
+                position: absolute
+                +bold
+                color: #ffffff
+                text-transform: uppercase
+                font-size: 34px
+                align-self: center
+                justify-self: center
+
+            img
+                max-width: 100%
+                width: 100%
+                max-height: 100vh
+
+        a:hover
+            position: relative
+
+            .opac
+                opacity: 0.5
+            
+            .fitnes__to,.food__to
+                display: block
+                opacity: 1
+   
+    .main
+        .about__me
+            background: linear-gradient(180deg, #000000 0%, rgba(129, 126, 126, 0) 100%), #000000
+
+                
+
+
+
+
