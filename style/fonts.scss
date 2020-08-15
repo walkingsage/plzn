@@ -1,5 +1,5 @@
 @mixin code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Code Pro Regular';
 }
 
 @mixin mons {
@@ -10,10 +10,24 @@
     font-weight: 400;
 }
 
+@mixin light {
+    font-weight: 300;
+}
+
 @mixin sbold {
     font-weight: 600;
 }
 
 @mixin bold {
     font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Code Pro Regular';
+    src: url('../fonts/Code-Pro.eot');
+    src: url('Code-Pro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Code-Pro.woff') format('woff'),
+    url('../fonts/Code-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }

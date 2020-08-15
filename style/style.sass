@@ -28,7 +28,7 @@ body
 
         .header__nav
             background-color: rgba(0, 0, 0, 0.5)
-            height: 60px
+            height: 80px
             position: fixed
             width: 100%
             z-index: 100
@@ -37,10 +37,13 @@ body
                 display: grid
                 grid-template-columns: 50% 50%
                 align-items: center
-                margin-top: 5.5px
+                height: 80px
+
+                a
+                    align-self: center
                 
-                img
-                    max-width: 100px
+                    img
+                        max-width: 130px
                     
                 nav
                     ul
@@ -54,7 +57,7 @@ body
                             text-decoration: none
                             color: #ffffff
                             +regular
-                            font-size: 15px/16px*1em
+                            font-size: 20px/16px*1em
 
                         a:hover
                             color: #00FFE5
@@ -68,7 +71,7 @@ body
                 +bold
                 color: #ffffff
                 text-transform: uppercase
-                font-size: 34px
+                font-size: 64px
                 align-self: center
                 justify-self: center
 
@@ -89,9 +92,124 @@ body
    
     .main
         .about__me
-            background: linear-gradient(180deg, #000000 0%, rgba(129, 126, 126, 0) 100%), #000000
+            background: linear-gradient(180deg, #000000 0%, rgba(129, 126, 126, 0) 50%) #000000
+            padding-top: 80px
 
+            .about__me__content
+
+                .top
+                    display: grid
+                    grid-template-rows: 96px 28px 138px
+                    grid-row-gap: 10px
+                    color: #ffffff
+                    +code
+                    text-align: center
+                    
+                    .title
+                        font-size: 72px/16px*1em
+                        text-transform: uppercase
+                    
+                    .subtitle
+                        font-size: 20px/16px*1em
+                        display: grid
+                        grid-template-columns: 42% 15% 42%
+                        align-items: center
+
+                        .line
+                            width: 20%
+                            height: 1px
+                            background-color: #ffffff
+                        
+                        .line:first-child
+                            justify-self: end
+                        
+                        .line:last-child
+                            justify-self: start
+                        
+                    .about__me__text
+                        +mons
+                        +light
+                        font-size: 26px/16px*1em
+                        max-width: 1200px
+                        justify-self: center
                 
+                .about__me__main
+                    display: grid
+                    grid-template-columns: repeat(3,550px/1800px*100%) 
+                    grid-column-gap: 50px/1800px*100% 
+                    justify-items: center
+
+                    a
+                        display: grid
+                        border: 2px solid #ffffff
+                        border-radius: 50px
+                        width: 80px
+                        height: 80px
+                        justify-items: center
+                        align-items: center
+                        text-decoration: none
+
+                    a:hover
+                        border-color: #00FFE5
+
+                        .fa
+                            color: #00FFE5
+
+                    .button
+                        width: 400px/550px*100%
+                        height: 80px
+                        align-self: center
+                        text-decoration: none
+                        font-size: 28px/16px*1em
+                        text-decoration: none
+                        color: #ffffff
+
+                    .button:hover
+                        border-color: #00ffe5
+                        color: #00ffe5
+
+
+                    .top__socials
+                        align-self: end
+                        margin-bottom: 30px
+
+                    .bottom__socials
+                        align-self: start
+                        margin-top: 30px
+
+                    .fa
+                        color: #ffffff
+                        font-size: 35px
+                        margin-bottom: 2px
+
+                    .left
+                        width: 100%
+                        grid-area: 1/1/2/2
+                        display: grid
+                        grid-template-rows: 280px 280px 160px
+                        justify-items: center
+
+
+
+                        
+
+
+
+
+                    img
+                        grid-area: 1/2/2/3
+                        max-width: 65%
+                        align-self: end
+
+                    .right
+                        width: 100%
+                        grid-area: 1/3/2/4
+                        display: grid
+                        grid-template-rows: 280px 280px 160px
+                        justify-items: center
+
+
+
 
 
 

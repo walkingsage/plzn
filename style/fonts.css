@@ -1,3 +1,8 @@
-
+@font-face {
+  font-family: 'Code Pro Regular';
+  src: url("../fonts/Code-Pro.eot");
+  src: url("Code-Pro.eot?#iefix") format("embedded-opentype"), url("../fonts/Code-Pro.woff") format("woff"), url("../fonts/Code-Pro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 /*# sourceMappingURL=fonts.css.map */
