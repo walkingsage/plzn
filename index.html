@@ -25,13 +25,13 @@
                 </div>
             </div>
         </div>
-        <a href="#fitnes">
+        <a id="fitness__choise" href="#gallery">
             <div class="fitnes__to">
                 фитнес-фотосессия
             </div>
-            <img class="opac" src="img/SF3CWcwOt4A 3.jpg" alt="Фитнес-фотосессия" class="fitnes">
+            <img class="opac" src="img/pic1.jpg" alt="Фитнес-фотосессия" class="fitnes">
         </a>
-        <a href="#food">
+        <a id="food__choise" href="#gallery">
             <div class="food__to">
                 фуд-фотосессия
             </div>
@@ -46,28 +46,28 @@
                         <div class="title">
                             человек с фотоаппаратом
                         </div>
-                        <div class="subtitle">
+                        <div class="name">
                             <span class="line"></span>
                             алексей пилизин
                             <span class="line"></span>
                         </div>
-                        <div class="about__me__text">
+                        <div class="subtitle">
                             Я не фотограф, и тем более не профессиональный фотограф! 
                             Я человек с фотоаппаратом, у которого есть свой вкус к прекрасному!
                         </div>
                     </div>
                     <div class="about__me__main">
                         <div class="left">
-                            <a class="top__socials" href="tel:893234234"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
-                            <a class="down__socials" href="mailto:pilizin-alexey@mail.ru"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                            <a class="top__socials socials" href="tel:893234234"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+                            <a class="down__socials socials" href="mailto:pilizin-alexey@mail.ru"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                             <a class="button" href="#contact">
                                 связаться
                             </a>
                         </div>
                         <img src="img/pilizin.png" alt="Алексей Пилизин">
                         <div class="right">
-                            <a class="top__socials" href="https://www.instagram.com/pilizinaleksey/?igshid=19x666unxoec0" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a class="down__socials" href="https://vk.com/pilizin_aleksey" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                            <a class="top__socials socials" href="https://www.instagram.com/pilizinaleksey/?igshid=19x666unxoec0" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a class="down__socials socials" href="https://vk.com/pilizin_aleksey" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
                             <a class="button" href="#gallery">
                                 смотреть работы
                             </a>
@@ -76,6 +76,91 @@
                 </div>
             </div>
         </div>
+        <div id="gallery" class="gallery__title">
+            <div class="container">
+                <div class="gallery__title__main">
+                    <div class="title">
+                        портфолио работ
+                    </div>
+                    <div class="subtitle">
+                        Я не фотограф, и тем более не профессиональный фотограф! Я человек с фотоаппаратом, у которого есть свой вкус к прекрасному!
+                    </div>
+                    <div class="choise">
+                        <a class="to__fitnes active" href="#gallery">фитнес-фотосессия</a>
+                        <a class="to__food" href="#gallery">фуд-фотосессия</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gallery" class="gallery__fitnes gallery">
+            <img src="img/pic1.jpg" alt="">
+            <img src="img/pic2.jpg" alt="">
+            <img src="img/pic3.jpg" alt="">
+            <img src="img/pic4.jpg" alt="">
+            <img src="img/pic5.jpg" alt="">
+            <img src="img/pic1.jpg" alt="">
+            <img src="img/pic4.jpg" alt="">
+            <img src="img/pic3.jpg" alt="">
+        </div>
+        <div style="display: none;" id="gallery" class="gallery__food gallery">
+            <img src="img/fpic1.jpg" alt="">
+            <img src="img/fpic2.jpg" alt="">
+            <img src="img/fpic3.jpg" alt="">
+            <img src="img/fpic4.jpg" alt="">
+            <img src="img/fpic5.jpg" alt="">
+            <img src="img/fpic6.jpg" alt="">
+            <img src="img/fpic3.jpg" alt="">
+            <img src="img/fpic2.jpg" alt="">
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="contact__main">
+                    <div class="title">
+                        контакты
+                    </div>
+                    <form id="contact__form" action="mail.php" method="post">
+                        <div class="fields">
+                            <input type="text" name="name" class="input input__name" placeholder="Введите имя" required>
+                            <input type="tel" name="phone" class="input input__phone" placeholder="Введите телефон" required>
+                            <input style="display: none;" type="text" name="sub" class="input" value="Обратная связь с сайта">
+                            <textarea name="message" cols="1" rows="10" class="input input__text" placeholder="Введите текст сообщения"></textarea>
+                            <div class="submit__data">
+                                <input class="check" type="checkbox" required>
+                                <p>Соглашаюсь на <a href="#" class="active">обработку данных</a></p>
+                            </div>
+                            <div class="contact__socials">
+                                <div class="socials__mail">
+                                    <a class="mail" href="mailto:pilizin-alexey@mail.ru">pilizin-alexey@mail.ru</a>
+                                    <a class="socials" href="mailto:pilizin-alexey@mail.ru"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="socials__phone">
+                                    <a class="socials" href="tel:893234234"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+                                    <a class="phone" href="tel:893234234">+7-(937)-234-23-24</a>
+                                </div>
+                            </div>
+                            <input id="submit" value="Отправить" type="submit">
+                        </div>
+                        <div style="display: none;" class="note">
+                            <div class="title">
+                                Успешно
+                            </div>
+                            <div class="subtitle">
+                                Ваше сообщение отправлено, я свяжусь с вами в ближайшее время!
+                            </div>
+                            <div class="socials">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
+    <footer class="footer">
+        <div class="name">
+            © Алексей пилизин, 2020
+        </div>
+        <a href="#">политика конфеденциальности</a>
+    </footer>
 </body>
 </html>
