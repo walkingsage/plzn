@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="/img/BXeSisf8iQE.png" type="image/x-icon">
+    <title>PLZN</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -25,13 +26,13 @@
                 </div>
             </div>
         </div>
-        <a id="fitness__choise" href="#gallery">
+        <a id="fitness__choise" href="#photos">
             <div class="fitnes__to">
                 фитнес-фотосессия
             </div>
             <img class="opac" src="img/pic1.jpg" alt="Фитнес-фотосессия" class="fitnes">
         </a>
-        <a id="food__choise" href="#gallery">
+        <a id="food__choise" href="#photos">
             <div class="food__to">
                 фуд-фотосессия
             </div>
@@ -76,6 +77,18 @@
                 </div>
             </div>
         </div>
+        <div style="display: none;" class="zoom">
+            <div class="prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+            <img src="img/test.jpg" alt="zoom photos">
+            <div class="next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+            <div class="close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </div>
         <div id="gallery" class="gallery__title">
             <div class="container">
                 <div class="gallery__title__main">
@@ -86,13 +99,13 @@
                         Я не фотограф, и тем более не профессиональный фотограф! Я человек с фотоаппаратом, у которого есть свой вкус к прекрасному!
                     </div>
                     <div class="choise">
-                        <a class="to__fitnes active" href="#gallery">фитнес-фотосессия</a>
-                        <a class="to__food" href="#gallery">фуд-фотосессия</a>
+                        <a class="to__fitnes active" href="#photos">фитнес-фотосессия</a>
+                        <a class="to__food" href="#photos">фуд-фотосессия</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="gallery" class="gallery__fitnes gallery">
+        <div id="photos" class="gallery__fitnes gallery">
             <img src="img/pic1.jpg" alt="">
             <img src="img/pic2.jpg" alt="">
             <img src="img/pic3.jpg" alt="">
@@ -101,8 +114,10 @@
             <img src="img/pic1.jpg" alt="">
             <img src="img/pic4.jpg" alt="">
             <img src="img/pic3.jpg" alt="">
+            <img src="img/pic4.jpg" alt="">
+            <img src="img/pic5.jpg" alt="">
         </div>
-        <div style="display: none;" id="gallery" class="gallery__food gallery">
+        <div style="display: none;" id="photos" class="gallery__food gallery">
             <img src="img/fpic1.jpg" alt="">
             <img src="img/fpic2.jpg" alt="">
             <img src="img/fpic3.jpg" alt="">

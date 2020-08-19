@@ -52,7 +52,8 @@ a {
 
 body {
   font-family: 'Code Pro Regular';
-  font-size: 0.9em; }
+  font-size: 1em;
+  position: relative; }
   body .header {
     position: relative;
     height: 100vh;
@@ -98,7 +99,8 @@ body {
         font-size: 3.375em;
         align-self: center;
         justify-self: center;
-        text-align: center; }
+        text-align: center;
+        max-height: 100%; }
       body .header a img {
         max-width: 100%;
         width: 100%;
@@ -192,6 +194,46 @@ body {
           display: grid;
           grid-template-rows: 146.5px 136.5px 80px;
           justify-items: center; }
+  body .main .zoom {
+    background-color: rgba(145, 144, 144, 0.5);
+    display: grid;
+    grid-template-columns: 7.6923076923% 84.6153846154% 7.6923076923%;
+    grid-template-rows: 10% 90%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 70px; }
+    body .main .zoom .fa {
+      font-size: 3em;
+      color: #ffffff; }
+    body .main .zoom .prev, body .main .zoom .next, body .main .zoom .close {
+      display: grid;
+      align-items: center;
+      justify-items: center; }
+    body .main .zoom .prev:hover, body .main .zoom .next:hover, body .main .zoom .close:hover {
+      cursor: pointer; }
+      body .main .zoom .prev:hover .fa, body .main .zoom .next:hover .fa, body .main .zoom .close:hover .fa {
+        color: #00ffe5; }
+    body .main .zoom .prev {
+      grid-area: 2/1/3/2;
+      width: 100%;
+      height: 100%; }
+    body .main .zoom img {
+      grid-area: 1/2/3/3;
+      max-width: 100%;
+      max-height: 100%;
+      align-self: center;
+      justify-self: center; }
+    body .main .zoom .next {
+      grid-area: 2/3/3/4;
+      width: 100%;
+      height: 100%; }
+    body .main .zoom .close {
+      grid-area: 1/3/2/4;
+      width: 100%;
+      height: 100%; }
+      body .main .zoom .close .fa {
+        font-size: 1.875em; }
   body .main .gallery__title {
     background-color: #000000;
     padding-top: 70px; }
@@ -213,7 +255,8 @@ body {
           color: #00ffe5; }
   body .main .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); }
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #ffffff; }
     body .main .gallery img {
       width: 100%;
       height: 360px; }
