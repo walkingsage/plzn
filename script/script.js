@@ -9,7 +9,7 @@ sliderImg = document.querySelector('.zoom > img'),
 prev = document.querySelector('.prev'),
 next = document.querySelector('.next'),
 close = document.querySelector('.close'),
-header = document.querySelector('.header'),
+header = document.querySelector('.header__nav'),
 galleryFood = document.querySelectorAll('.gallery__food > img'),
 galleryFitnes = document.querySelectorAll('.gallery__fitnes > img');
 
@@ -23,9 +23,12 @@ const show = function(elem){
 let src, index;
 
 const zoom = elem => {
-    hide(header);
+    header.style.animation = 'headerHide 5s cubic-bezier(0.26, 0.45, 0.6, 0.93) forwards';
     sliderImg.src = src;
-    show(slider);
+    setTimeout(() => {
+        show(slider);  
+      }, 1000);
+    slider.style.animation = 'show 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
 };
 
 const zoomFitness = () => {
@@ -118,9 +121,12 @@ next.addEventListener('click',() => {
 });
 
 close.addEventListener('click',() => {
-    hide(slider);
-    show(header);
-})
+    slider.style.animation = 'hide 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
+    setTimeout(() => {
+        hide(slider);  
+      }, 2000);
+    header.style.animation = 'headerShow 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
+});
 
 toFitness.addEventListener('click', () => {
     hide(Food);
