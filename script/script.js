@@ -11,7 +11,8 @@ next = document.querySelector('.next'),
 close = document.querySelector('.close'),
 header = document.querySelector('.header__nav'),
 galleryFood = document.querySelectorAll('.gallery__food > img'),
-galleryFitnes = document.querySelectorAll('.gallery__fitnes > img');
+galleryFitnes = document.querySelectorAll('.gallery__fitnes > img'),
+anchors = document.querySelectorAll('a[href*="#"]');
 
 const hide = function(elem){
     elem.style.display = 'none';
@@ -28,7 +29,7 @@ const zoom = elem => {
     setTimeout(() => {
         show(slider);  
       }, 1000);
-    slider.style.animation = 'show 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
+    slider.style.animation = 'show 2s ease-out forwards';
 };
 
 const zoomFitness = () => {
@@ -73,6 +74,19 @@ galleryFitnes.forEach((element) => {
         zoom(slider);
     });
 });
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const blockID = anchor.getAttribute('href').substr(1);
+      
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  };
 
 prev.addEventListener('click',() => {
     if(toFitness.classList.contains('active')){
@@ -121,7 +135,7 @@ next.addEventListener('click',() => {
 });
 
 close.addEventListener('click',() => {
-    slider.style.animation = 'hide 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
+    slider.style.animation = 'hide 2s ease-out forwards';
     setTimeout(() => {
         hide(slider);  
       }, 2000);
@@ -129,8 +143,12 @@ close.addEventListener('click',() => {
 });
 
 toFitness.addEventListener('click', () => {
-    hide(Food);
-    show(Fitnes);
+    Food.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    setTimeout(() => {
+        hide(Food);
+        show(Fitnes);  
+      }, 1000);
+    Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     toFitness.classList.add('active');
     toFood.classList.remove('active');
     console.log(src,index);
@@ -144,8 +162,12 @@ fitnesChoise.addEventListener('click', () => {
 });
 
 toFood.addEventListener('click', () => {
-    hide(Fitnes);
-    show(Food);
+    Fitnes.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    setTimeout(() => {
+        show(Food);
+        hide(Fitnes);  
+      }, 1000);
+    Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     toFood.classList.add('active');
     toFitness.classList.remove('active');
 });

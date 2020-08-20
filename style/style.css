@@ -24,6 +24,60 @@
     opacity: 0; }
   to {
     opacity: 1; } }
+@media (min-width: 1770px) {
+  body {
+    font-size: 1.5em !important; }
+
+  .nav__content {
+    height: 100px !important; }
+
+  .logo {
+    max-width: 150px !important; }
+
+  .about__me {
+    padding-top: 100px !important; }
+
+  .alexey {
+    max-width: 80% !important; }
+
+  .name {
+    grid-template-columns: 40% 20% 40% !important; }
+
+  .top {
+    grid-template-rows: 80px 30px 88px !important; }
+
+  .socials {
+    width: 100px !important;
+    height: 100px !important; }
+
+  .button {
+    height: 80px !important; }
+
+  .gallery__title {
+    padding-top: 100px !important; }
+
+  .gallery__title__main {
+    grid-template-rows: 60px 50px 150px !important; }
+
+  .gallery img {
+    width: 100%;
+    height: 600px !important; }
+
+  .fields {
+    grid-template-rows: 110px 140px 40px 120px 100px !important; }
+
+  .input {
+    height: 80px !important; }
+
+  .input__text {
+    height: 130px !important; }
+
+  #submit {
+    height: 80px !important;
+    align-self: center; } }
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.3em !important; } }
 * {
   margin: 0;
   padding: 0; }
@@ -44,7 +98,7 @@
   color: #00FFE5 !important; }
 
 .title {
-  font-size: 3em;
+  font-size: 2.375em;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center; }
@@ -52,9 +106,9 @@
 .subtitle {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.25em;
   justify-self: center;
-  color: #ffffff;
+  color: #D3D3D3;
   text-align: center; }
 
 .socials {
@@ -147,9 +201,9 @@ body {
         font-family: 'Code Pro Regular';
         text-align: center; }
         body .main .about__me .about__me__content .top .name {
-          font-size: 1.125em;
+          font-size: 0.875em;
           display: grid;
-          grid-template-columns: 42% 15% 42%;
+          grid-template-columns: 44% 11% 44%;
           align-items: center; }
           body .main .about__me .about__me__content .top .name .line {
             width: 20%;
@@ -333,7 +387,8 @@ body {
         grid-area: 3/1/4/3;
         display: grid;
         grid-template-columns: 36.0769230769% 63.9230769231%;
-        grid-column-gap: 20px; }
+        grid-column-gap: 20px;
+        align-items: center; }
         body .main #contact .contact__main #contact__form .submit__data .check {
           width: 20px;
           height: 20px;
@@ -354,7 +409,7 @@ body {
           align-items: center;
           color: #ffffff; }
           body .main #contact .contact__main #contact__form .contact__socials .socials__mail .mail {
-            font-size: 1.625em;
+            font-size: 1.25em;
             justify-self: end;
             color: #ffffff; }
           body .main #contact .contact__main #contact__form .contact__socials .socials__mail .mail:hover {
@@ -371,7 +426,7 @@ body {
           align-items: center;
           color: #ffffff; }
           body .main #contact .contact__main #contact__form .contact__socials .socials__phone .phone {
-            font-size: 1.625em;
+            font-size: 1.25em;
             justify-self: start;
             color: #ffffff; }
           body .main #contact .contact__main #contact__form .contact__socials .socials__phone .phone:hover {
@@ -400,14 +455,14 @@ body {
     grid-row-gap: 5px; }
     body .footer .name {
       color: #000000;
-      font-size: 1.125em;
+      font-size: 0.875em;
       align-self: end;
       text-align: center; }
     body .footer a {
       text-decoration: none;
       color: #00ffe5;
       text-transform: uppercase;
-      font-size: 0.75em;
+      font-size: 0.625em;
       align-self: start;
       text-align: center; }
 
