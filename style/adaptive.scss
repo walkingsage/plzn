@@ -72,9 +72,33 @@
 
 }
 
+@media (max-width: 1900px){
+    body{
+        font-size: 1.12em !important;
+    }
+}
+
 
 @media (max-width: 1440px){
     body{
-        font-size: 1em !important;
+        font-size: 0.95em !important;
+    }
+    .gallery__title__main{
+        grid-template-rows: 48px 40px 80px !important;
+    }
+}
+
+@media (max-width: 1280px){
+    body{
+        font-size: 0.8em !important;
+    }
+    .gallery__title__main{
+        grid-template-rows: 48px 40px 80px !important;
+    }
+    .gallery{
+        grid-template-columns: repeat(3,1fr) !important;
+    }
+    .name{
+        grid-template-columns: 40% 20% 40% !important;
     }
 }

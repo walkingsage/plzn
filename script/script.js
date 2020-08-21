@@ -1,5 +1,8 @@
 const Fitnes = document.querySelector('.gallery__fitnes'),
 Food = document.querySelector('.gallery__food'),
+galleryTitle = document.querySelector('.gallery__title'),
+galleryTit = document.querySelector('.gallery__tit'),
+gallerySub = document.querySelector('.gallery__sub'),
 fitnesChoise = document.getElementById('fitness__choise'),
 foodChoise = document.getElementById('food__choise'),
 toFitness = document.querySelector('.to__fitnes'),
@@ -12,7 +15,8 @@ close = document.querySelector('.close'),
 header = document.querySelector('.header__nav'),
 galleryFood = document.querySelectorAll('.gallery__food > img'),
 galleryFitnes = document.querySelectorAll('.gallery__fitnes > img'),
-anchors = document.querySelectorAll('a[href*="#"]');
+anchors = document.querySelectorAll('a[href*="#"]'),
+navigation = document.querySelectorAll('ul > a');
 
 const hide = function(elem){
     elem.style.display = 'none';
@@ -21,9 +25,36 @@ const hide = function(elem){
 const show = function(elem){
     elem.style.display = 'grid';
 };
+
+const remactive = () => {
+    for(let i = 0; i < navigation.length; i++){
+        navigation[i].classList.remove('active');
+    }
+};
+
+const scrollOf = () => {
+    document.body.style.overflow = 'hidden';
+};
+
+const scrollOn = () => {
+    document.body.style.overflow = 'scroll';
+};
+
+const colorFood = element => {
+    element.style.color = '#ffffff';
+    element.style.background = '#000000';
+};
+
+const colorFitness = element => {
+    element.style.color = '#000000';
+    element.style.background = '#ffffff';
+};
+
+
 let src, index;
 
 const zoom = elem => {
+    scrollOf();
     header.style.animation = 'headerHide 5s cubic-bezier(0.26, 0.45, 0.6, 0.93) forwards';
     sliderImg.src = src;
     setTimeout(() => {
@@ -72,6 +103,13 @@ galleryFitnes.forEach((element) => {
             }
         };
         zoom(slider);
+    });
+});
+
+navigation.forEach((element) => {
+    element.addEventListener('click', () => {
+        remactive();
+        element.classList.add('active');
     });
 });
 
@@ -139,6 +177,7 @@ close.addEventListener('click',() => {
     setTimeout(() => {
         hide(slider);  
       }, 2000);
+    scrollOn();
     header.style.animation = 'headerShow 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
 });
 
@@ -151,14 +190,25 @@ toFitness.addEventListener('click', () => {
     Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     toFitness.classList.add('active');
     toFood.classList.remove('active');
-    console.log(src,index);
+    colorFood(galleryTitle);
+    gallerySub.style.color = '#D6D6D6';
+    galleryTit.style.color = '#ffffff';
+    toFood.style.color = '#ffffff';
 });
 
 fitnesChoise.addEventListener('click', () => {
-    hide(Food);
-    show(Fitnes);
+    Food.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    setTimeout(() => {
+        hide(Food);
+        show(Fitnes);  
+      }, 1000);
+    Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     toFitness.classList.add('active');
     toFood.classList.remove('active');
+    colorFood(galleryTitle);
+    gallerySub.style.color = '#D6D6D6';
+    galleryTit.style.color = '#ffffff';
+    toFood.style.color = '#ffffff';
 });
 
 toFood.addEventListener('click', () => {
@@ -168,13 +218,25 @@ toFood.addEventListener('click', () => {
         hide(Fitnes);  
       }, 1000);
     Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    colorFitness(galleryTitle);
+    gallerySub.style.color = '#393939';
+    galleryTit.style.color = '#000000';
     toFood.classList.add('active');
     toFitness.classList.remove('active');
+    toFitness.style.color = '#000000';
 });
 
 foodChoise.addEventListener('click', () => {
-    hide(Fitnes);
-    show(Food);
+    Fitnes.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    setTimeout(() => {
+        show(Food);
+        hide(Fitnes);  
+      }, 1000);
+    Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    colorFitness(galleryTitle);
+    gallerySub.style.color = '#393939';
+    galleryTit.style.color = '#000000';
     toFood.classList.add('active');
     toFitness.classList.remove('active');
+    toFitness.style.color = '#000000';
 });
