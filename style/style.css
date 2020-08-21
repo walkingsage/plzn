@@ -28,6 +28,9 @@
   body {
     font-size: 1.5em !important; }
 
+  .header {
+    background-size: contain center 100%; }
+
   .nav__content {
     height: 100px !important; }
 
@@ -75,9 +78,9 @@
   #submit {
     height: 80px !important;
     align-self: center; } }
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
   body {
-    font-size: 1.3em !important; } }
+    font-size: 1em !important; } }
 * {
   margin: 0;
   padding: 0; }
@@ -462,7 +465,7 @@ body {
       text-decoration: none;
       color: #00ffe5;
       text-transform: uppercase;
-      font-size: 0.625em;
+      font-size: 0.75em;
       align-self: start;
       text-align: center; }
 

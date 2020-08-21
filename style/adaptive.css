@@ -2,6 +2,9 @@
   body {
     font-size: 1.5em !important; }
 
+  .header {
+    background-size: contain center 100%; }
+
   .nav__content {
     height: 100px !important; }
 
@@ -49,6 +52,6 @@
   #submit {
     height: 80px !important;
     align-self: center; } }
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
   body {
     font-size: 1em !important; } }
