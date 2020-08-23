@@ -2,7 +2,8 @@ const Fitnes = document.querySelector('.gallery__fitnes'),
 Food = document.querySelector('.gallery__food'),
 galleryTitle = document.querySelector('.gallery__title'),
 galleryTit = document.querySelector('.gallery__tit'),
-gallerySub = document.querySelector('.gallery__sub'),
+gallerySubFit = document.querySelector('.gallery__sub__fitnes'),
+gallerySubFood = document.querySelector('.gallery__sub__food'),
 fitnesChoise = document.getElementById('fitness__choise'),
 foodChoise = document.getElementById('food__choise'),
 toFitness = document.querySelector('.to__fitnes'),
@@ -153,6 +154,29 @@ prev.addEventListener('click',() => {
     }
 });
 
+sliderImg.addEventListener('click', () => {
+    if(toFitness.classList.contains('active')){
+        if (index == galleryFitnes.length-1){
+            index = 0;
+            zoomFitness();
+        }
+        else{
+            index ++;
+            zoomFitness();
+        }
+    }
+    else{
+        if (index == galleryFood.length-1){
+            index = 0;
+            zoomFood();
+        }
+        else{
+            index ++;
+            zoomFood();
+        }
+    }
+});
+
 next.addEventListener('click',() => {
     if(toFitness.classList.contains('active')){
         if (index == galleryFitnes.length-1){
@@ -195,7 +219,8 @@ toFitness.addEventListener('click', () => {
     toFitness.classList.add('active');
     toFood.classList.remove('active');
     colorFood(galleryTitle);
-    gallerySub.style.color = '#D6D6D6';
+    gallerySubFood.style.display = 'none';
+    gallerySubFit.style.display = 'block';
     galleryTit.style.color = '#ffffff';
     toFood.style.color = '#ffffff';
 });
@@ -210,7 +235,8 @@ fitnesChoise.addEventListener('click', () => {
     toFitness.classList.add('active');
     toFood.classList.remove('active');
     colorFood(galleryTitle);
-    gallerySub.style.color = '#D6D6D6';
+    gallerySubFood.style.display = 'none';
+    gallerySubFit.style.display = 'block';
     galleryTit.style.color = '#ffffff';
     toFood.style.color = '#ffffff';
 });
@@ -223,7 +249,8 @@ toFood.addEventListener('click', () => {
       }, 1000);
     Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     colorFitness(galleryTitle);
-    gallerySub.style.color = '#393939';
+    gallerySubFit.style.display = 'none';
+    gallerySubFood.style.display = 'block';
     galleryTit.style.color = '#000000';
     toFood.classList.add('active');
     toFitness.classList.remove('active');
@@ -238,7 +265,8 @@ foodChoise.addEventListener('click', () => {
       }, 1000);
     Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     colorFitness(galleryTitle);
-    gallerySub.style.color = '#393939';
+    gallerySubFit.style.display = 'none';
+    gallerySubFood.style.display = 'block';
     galleryTit.style.color = '#000000';
     toFood.classList.add('active');
     toFitness.classList.remove('active');
@@ -263,4 +291,7 @@ closeBurger.addEventListener('click', () => {
     closeBurger.style.display = 'none';
 });
 
-screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu));
+window.addEventListener('resize', () => {
+    screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu));
+});
+ screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu));

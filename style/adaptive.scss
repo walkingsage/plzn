@@ -164,7 +164,17 @@
     }   
 
     //form
-    
+    .contact__main{
+        grid-row-gap: 30px !important;
+    }
+    .fields{
+        grid-template-rows: 50px 90px 20px 60px 50px !important;
+        grid-row-gap: 20px !important;
+    }
+    .contact__socials .socials{
+        width: 50px !important;
+        height: 50px !important;
+    }
     
 }
 
@@ -288,9 +298,15 @@
 
     
     //gallery
+    .gallery__title{
+        padding-top: 50px !important;
+    }
     .gallery img{
         width: 100%;
         height: 230px !important;
+    }
+    .gallery__title__main{
+        grid-template-rows: 25px 35px 80px !important;
     }
 
     //form
@@ -364,32 +380,26 @@
     
     //gallery
     .gallery{
-        height: 400px !important;
+        grid-template-columns: repeat(2,1fr) !important;
     }
     .gallery img{
         width: 100%;
-        height: 200px !important;
+        height: 250px !important;
     }
 
     //form
+    #contact{
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+    #submit{
+        width: 35% !important;
+    }
     
  
 }
 
-//only for gallery
-@media (max-width: 580px){
-    .gallery{
-        height: 360px !important;
-    }
-    .gallery img{
-        width: 100%;
-        height: 180px !important;
-    }
-    .about__me__main img{
-        width: 50% !important; 
-        align-self: center;
-    }
-}
+
 
 @media (max-width: 480px) {
     body{
@@ -426,22 +436,101 @@
     }
     
     //gallery
+    
+    .gallery__title__main{
+        grid-template-rows: 25px 40px 60px !important;
+    }
     .gallery{
         height: 370px !important;
     }
     .gallery img{
         width: 100%;
-        height: 150px !important;
+        height: 195px !important;
     }
 
     //form
+    .fields{
+        grid-template-columns: 100% !important;
+        grid-template-rows: 50px 50px 100px 20px 50px 50px !important;
+    }
+    .input__name{
+        grid-area: 1/1/2/2 !important;
+        justify-self: center !important;
+        width: 90% !important;
+    }
+    .input__phone{
+        grid-area: 2/1/3/2 !important;
+        justify-self: center !important;
+        width: 90% !important;
+    }
+    .input__text{
+        grid-area: 3/1/4/2 !important;
+        justify-self: center !important;
+        border-radius: 25px !important;
+        width: 90% !important;
+    }
+    .submit__data{
+        grid-area: 4/1/5/2 !important;
+    }
+    .contact__socials{
+        grid-area: 5/1/6/2 !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 100% !important;
+    }
+    .socials__mobile{
+        display: grid !important;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 50% 50%;
+    }
+    .socials__mobile .mail{
+        grid-area: 1/2/2/3;
+        font-size: 18px/16px*1em;
+        justify-self: center;
+        color: #ffffff;
+        align-self: center;
+    }
+    .socials__mobile .mail:hover{
+        color: #00ffe5;
+    }
+    .socials__mobile .mail__icon{
+        grid-area: 1/1/3/2;
+    }
+    .socials__mobile .phone{
+        grid-area: 2/2/3/3;
+        font-size: 18px/16px*1em;
+        justify-self: center;
+        color: #ffffff;
+        align-self: center;
+    }
+    .socials__mobile .phone:hover{
+        grid-area: 2/2/3/3;
+        font-size: 18px/16px*1em;
+        justify-self: start;
+        color: #00ffe5;
+    }
+
+    .socials__mobile .phone__icon{
+        grid-area: 1/3/3/4;
+    }
+
+    .socials__mail,.socials__phone{
+        display: none !important;
+    }
+    #submit{
+        grid-area: 6/1/7/2 !important;
+        width: 80% !important;
+    }
+    .socials__mobile .socials,.socials__mobile .socials{
+        width: 40px !important;
+        height: 40px !important;
+    }
     
  
 }
 
 @media (max-width: 360px){
     body{
-        font-size: 0.4em !important;
+        font-size: 0.45em !important;
     }
 
     //header
@@ -451,6 +540,11 @@
 
 
     //about__me
+    
+    .top{
+        grid-template-rows: 20px 10px 25px !important;
+        grid-row-gap: 5px !important;
+    }
     .about__me__main{
         grid-template-columns: repeat(4,1fr) !important; 
         grid-template-rows: 165px 70px 50px !important;
@@ -465,7 +559,15 @@
     }
     
     //gallery
-
+    .gallery__title__main{
+        grid-template-rows: 25px 35px 50px !important;
+        grid-row-gap: 5px !important;
+    }
+    
+    .gallery img{
+        width: 100%;
+        height: 165px !important;
+    }
 
     //form
     
