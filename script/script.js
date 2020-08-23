@@ -10,7 +10,7 @@ toFood = document.querySelector('.to__food'),
 slider = document.querySelector('.zoom'),
 menuBurger = document.querySelector('.fa-bars'),
 closeBurger = document.querySelector('.close__nav'),
-menu = document.getElementsByTagName('.menu'),
+menu = document.querySelector('.menu'),
 sliderImg = document.querySelector('.zoom > img'),
 prev = document.querySelector('.prev'),
 next = document.querySelector('.next'),
@@ -246,6 +246,21 @@ foodChoise.addEventListener('click', () => {
 });
 
 menuBurger.addEventListener('click', () => {
-    show(menu);
-    menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards'
+    menuBurger.classList.remove('burgerOn');
+    menuBurger.classList.add('burgerOff');
+    menu.style.display = 'grid';
+    menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    closeBurger.style.display = 'block';
 });
+
+closeBurger.addEventListener('click', () => {
+    menuBurger.classList.remove('burgerOff');
+    menuBurger.classList.add('burgerOn');
+    menu.style.animation = 'closeNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    setTimeout(() => {
+        hide(menu);  
+      }, 1000);
+    closeBurger.style.display = 'none';
+});
+
+screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu));

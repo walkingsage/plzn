@@ -134,6 +134,21 @@
     .name{
         grid-template-columns: 40% 20% 40% !important;
     }
+    
+    .about__me__main{
+        grid-template-columns: 510px/1300px*100% 270px/1300px*100% 510px/1300px*100% !important; 
+    }
+    .about__me__main .socials{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .about__me__main .fa{
+        font-size: 26px/16px*1em !important;
+    }
+    .button{
+        height: 50px !important;
+        font-size: 20px/16px*1em !important;
+    }
 
     
     //gallery
@@ -159,13 +174,31 @@
         font-size: 0.75em !important;
     }
 
-    //header
-    .header{
-        height: 500px !important;
-    }
+    // //header
+    // .header{
+    //     height: 100vh !important;
+    // }
 
 
     //about__me
+    .name{
+        grid-template-columns: 40% 20% 40% !important;
+    }
+    .about__me__main{
+        grid-template-columns: 475px/1300px*100% 340px/1300px*100% 475px/1300px*100% !important; 
+    }
+    .about__me__main .socials{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .about__me__main .fa{
+        font-size: 24px/16px*1em !important;
+    }
+    .button{
+        height: 50px !important;
+        font-size: 18px/16px*1em !important;
+        width: 80% !important;
+    }
 
     
     //gallery
@@ -194,6 +227,64 @@
     }
 
     //about__me
+    .top{
+        grid-template-rows: 30px 15px 30px !important;
+    }
+    .name{
+        grid-template-columns: 40% 20% 40% !important;
+    }
+    .about__me__main{
+        grid-template-columns: repeat(4,1fr) !important; 
+        grid-template-rows: 330px 80px 70px;
+    }
+    .about__me__main img{
+        grid-area: 1/2/2/4 !important;
+        width: 50% !important;
+        align-self: start;
+    }
+    .left{
+        display: none !important;
+    }
+    .right{
+        display: none !important;
+    }
+    .socials{
+        margin: 0 !important;
+        align-self: center;
+        justify-self: center;
+    }
+    .top__socials{
+        align-self: center !important;
+    }
+    .socials__bottom{
+        // border-top: 1px solid #858585;
+        grid-area: 2/1/3/5;
+        display: grid !important;
+        grid-template-columns: repeat(4,1fr);
+        width: 100%;
+    }
+    .buttons__bottom{
+        grid-area: 3/1/4/5;
+        display: grid !important;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+    .button{
+        width: 100% !important;
+        justify-self: center !important;
+    }
+    .about__me__main .socials{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .about__me__main .fa{
+        font-size: 24px/16px*1em !important;
+    }
+    .button{
+        height: 50px !important;
+        font-size: 18px/16px*1em !important;
+        width: 80% !important;
+    }
 
     
     //gallery
@@ -208,9 +299,6 @@
 }
 
 @media (max-width: 650px){
-    body{
-        font-size: 0.5em !important;
-    }
 
     //header
     .header{
@@ -221,11 +309,58 @@
     }
     .nav__content img{
         max-width: 60px !important;
+    }.burgerOn{
+        display: block !important;
+    }
+    .nav__content{
+        grid-template-rows: 40px auto;
+        grid-row-gap: 1px;
+    }
+    nav{
+        grid-area: 2/1/2/3;
+        display: none;
+        max-width: 100%;
+        align-self: start;
+        justify-self: center;
+        overflow: hidden;
+    }
+    nav ul{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: repeat(4,40px) !important;
+        grid-row-gap: 1px;
+        width: 100%;
+    }
+
+    ul a{
+        position: relative;
+        display: grid;
+        background-color: rgba(22, 22, 22, 0.7);
+        width: 100%;
+        height: 100%;
+        font-size: 12px !important;
+    }
+    a li{
+        align-self: center;
+        text-align: center;
     }
 
 
     //about__me
-
+    .about__me__content{
+        padding-top: 50px !important;
+    }
+    .about__me__main{
+        grid-template-columns: repeat(4,1fr) !important; 
+        grid-template-rows: 250px 70px 60px !important;
+    }
+    .about__me__main img{
+        width: 45% !important; 
+        align-self: center;
+    }
+    .button{
+        height: 40px !important;
+    }
     
     //gallery
     .gallery{
@@ -250,68 +385,45 @@
         width: 100%;
         height: 180px !important;
     }
+    .about__me__main img{
+        width: 50% !important; 
+        align-self: center;
+    }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
     body{
-        font-size: 0.45em !important;
+        font-size: 0.5em !important;
     }
 
     //header
     .header{
         height: 280px !important;
     }
-    .fa-bars{
-        display: block !important;
-    }
-    .fa-bars:hover{
-        color: #00FFE5;
-    }
-    nav{
-        position: relative;
-        display: none !important;
-        grid-template-columns: 100%;
-        height: 30px;
-        align-self: center;
-    }
-    nav ul{
-        position: absolute;
-        display: grid;
-        grid-template-columns: 100% !important;
-        grid-template-rows: repeat(4,40px);
-        grid-row-gap: 1px;
-        width: 100%;
-    }
-
-    ul a{
-        position: relative;
-        display: grid;
-        background-color: rgba(56, 56, 56, 0.493);
-        width: 100%;
-        height: 100%;
-        font-size: 12px !important;
-    }
-    a li{
-        align-self: center;
-        text-align: center;
-    }
-    ul .fa-times{
-        position: absolute;
-        display: block !important;
-        font-size: 14px;
-        color: #ffffff;
-        z-index: 101;
-        justify-self: end;
-        margin-right: 5px;
-    }
-    .fa-times:hover{
-        color: #00FFE5;
-    }
+    
+    
 
 
 
     //about__me
-
+    .top{
+        grid-template-rows: 20px 10px 25px !important;
+    }
+    .about__me__main{
+        grid-template-columns: repeat(4,1fr) !important; 
+        grid-template-rows: 210px 70px 50px !important;
+    }
+    .about__me__main .fa{
+        font-size: 16px !important;
+    }
+    .button{
+        font-size: 10px !important;
+        height: 30px !important;
+    }
+    .about__me__main .socials{
+        width: 40px !important;
+        height: 40px !important;
+    }
     
     //gallery
     .gallery{
@@ -328,6 +440,10 @@
 }
 
 @media (max-width: 360px){
+    body{
+        font-size: 0.4em !important;
+    }
+
     //header
     .header{
         height: 220px !important;
@@ -335,7 +451,18 @@
 
 
     //about__me
-
+    .about__me__main{
+        grid-template-columns: repeat(4,1fr) !important; 
+        grid-template-rows: 165px 70px 50px !important;
+    }
+    .about__me__main .fa{
+        font-size: 12px !important;
+        
+    }
+    .about__me__main .socials{
+        width: 35px !important;
+        height: 35px !important;
+    }
     
     //gallery
 
