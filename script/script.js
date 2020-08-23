@@ -8,6 +8,9 @@ foodChoise = document.getElementById('food__choise'),
 toFitness = document.querySelector('.to__fitnes'),
 toFood = document.querySelector('.to__food'),
 slider = document.querySelector('.zoom'),
+menuBurger = document.querySelector('.fa-bars'),
+closeBurger = document.querySelector('.close__nav'),
+menu = document.getElementsByTagName('.menu'),
 sliderImg = document.querySelector('.zoom > img'),
 prev = document.querySelector('.prev'),
 next = document.querySelector('.next'),
@@ -38,6 +41,7 @@ const scrollOf = () => {
 
 const scrollOn = () => {
     document.body.style.overflow = 'scroll';
+    document.body.style.overflowX = 'hidden';
 };
 
 const colorFood = element => {
@@ -239,4 +243,9 @@ foodChoise.addEventListener('click', () => {
     toFood.classList.add('active');
     toFitness.classList.remove('active');
     toFitness.style.color = '#000000';
+});
+
+menuBurger.addEventListener('click', () => {
+    show(menu);
+    menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards'
 });
