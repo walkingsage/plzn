@@ -175,7 +175,18 @@
         width: 50px !important;
         height: 50px !important;
     }
+
+   //footer
     
+   .footer{
+    height: 50px;
+    }
+    .footer .name{
+        font-size: 16px !important;
+    }
+    footer a{
+        font-size: 12px !important;
+    }
 }
 
 @media (max-width: 992px){
@@ -311,7 +322,7 @@
 
     //form
     
-    
+    //footer
 }
 
 @media (max-width: 650px){
@@ -570,6 +581,18 @@
     }
 
     //form
+
+    //footer
+    
+    .footer{
+        height: 50px;
+    }
+    .footer .name{
+        font-size: 12px !important;
+    }
+    footer a{
+        font-size: 10px;
+    }
     
  
 }
