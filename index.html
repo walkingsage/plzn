@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style/adaptive.css"> 
     <link rel="stylesheet" href="style/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script/jquery.maskedinput.min.js"></script>
 </head>
 <body>  
     <header id="main" class="header">
@@ -159,7 +161,7 @@
                     <form id="contact__form" action="mail.php" method="post">
                         <div class="fields">
                             <input type="text" name="name" class="input input__name" placeholder="Введите имя" required>
-                            <input type="tel" name="phone" class="input input__phone" placeholder="Введите телефон" required>
+                            <input type="tel" name="phone" id="number" class="input input__phone" placeholder="Введите телефон" required>
                             <input style="display: none;" type="text" name="sub" class="input" value="Обратная связь с сайта">
                             <textarea name="message" cols="1" rows="10" class="input input__text" placeholder="Введите текст сообщения"></textarea>
                             <div class="submit__data">
@@ -205,6 +207,7 @@
             © Алексей пилизин, 2020
         </div>
         <a href="#">политика конфеденциальности</a>
+        <script type="text/javascript">jQuery(function($){$("#number").mask("+7-(999)-999-99-99");});</script>
         <script src="script/script.js"></script>
     </footer>
 </body>
