@@ -284,6 +284,7 @@ menuBurger.addEventListener('click', () => {
     menu.style.display = 'grid';
     menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     closeBurger.style.display = 'block';
+    scrollOf();
 });
 
 closeBurger.addEventListener('click', () => {
@@ -294,6 +295,7 @@ closeBurger.addEventListener('click', () => {
         hide(menu);  
       }, 1000);
     closeBurger.style.display = 'none';
+    scrollOn();
 });
 
 window.addEventListener('resize', () => {

@@ -385,6 +385,9 @@
         width: 45% !important; 
         align-self: center;
     }
+    .top .name{
+        font-size: 12px/16px*1em !important;
+    }
     .button{
         height: 40px !important;
     }
@@ -427,6 +430,10 @@
 
 
     //about__me
+    .about__me__main img{
+        width: 52% !important;
+    }
+
     .top{
         grid-template-rows: 20px 10px 25px !important;
     }
@@ -551,7 +558,9 @@
 
 
     //about__me
-    
+    .top .name{
+        font-size: 12px/16px*1em !important;
+    }
     .top{
         grid-template-rows: 20px 10px 25px !important;
         grid-row-gap: 5px !important;

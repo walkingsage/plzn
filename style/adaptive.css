@@ -274,6 +274,9 @@
     width: 45% !important;
     align-self: center; }
 
+  .top .name {
+    font-size: 0.75em !important; }
+
   .button {
     height: 40px !important; }
 
@@ -296,6 +299,9 @@
 
   .header {
     height: 280px !important; }
+
+  .about__me__main img {
+    width: 52% !important; }
 
   .top {
     grid-template-rows: 20px 10px 25px !important; }
@@ -403,6 +409,9 @@
 
   .header {
     height: 220px !important; }
+
+  .top .name {
+    font-size: 0.75em !important; }
 
   .top {
     grid-template-rows: 20px 10px 25px !important;
