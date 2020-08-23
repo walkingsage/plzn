@@ -20,6 +20,7 @@ header = document.querySelector('.header__nav'),
 galleryFood = document.querySelectorAll('.gallery__food > img'),
 galleryFitnes = document.querySelectorAll('.gallery__fitnes > img'),
 anchors = document.querySelectorAll('a[href*="#"]'),
+nameInput = document.querySelector('.input__name'),
 navigation = document.querySelectorAll('ul > a');
 
 const hide = function(elem){
@@ -54,6 +55,10 @@ const colorFitness = element => {
     element.style.color = '#000000';
     element.style.background = '#ffffff';
 };
+
+nameInput.addEventListener('input',function(){
+    nameInput.value = nameInput.value.replace(/[0-9,-.,:+/*]/g, '');
+});
 
 
 let src, index;
