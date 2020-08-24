@@ -352,15 +352,22 @@ body
                         color: #00ffe5
 
         .gallery
-            display: grid
-            grid-template-columns: repeat(4,1fr)
-            background-color: #ffffff
+            // position: relative
+            // display: grid
+            // grid-template-columns: repeat(4,1fr) !important
+            // background-color: #ffffff
             max-height: 100vh
             overflow: scroll
             overflow-x: hidden
+            
+            .sizer4
+                width: 20%
 
             .item
-                float: left
+                width: 25%
+
+            .item__food
+                width: 25%
 
             img
                 width: 100%
