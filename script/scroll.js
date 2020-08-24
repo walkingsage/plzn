@@ -24,8 +24,10 @@ nav.find('a').on('click', function () {
     , id = $el.attr('href');
   
   $('html, body').animate({
-    scrollTop: $(id).offset().top - nav_height
+    scrollTop: $(id).offset().top
   }, 500);
   
   return false;
 });
+
+jQuery(function($){$("#number").mask("+7-(999)-999-99-99");});
