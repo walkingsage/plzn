@@ -320,15 +320,19 @@ body {
           body .main .gallery__title .gallery__title__main .choise a:hover {
             color: #00ffe5; }
     body .main .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      background-color: #ffffff;
       max-height: 100vh;
       overflow: scroll;
       overflow-x: hidden; }
+      body .main .gallery .sizer4 {
+        width: 20%; }
+      body .main .gallery .item {
+        width: 25%; }
+      body .main .gallery .item__food {
+        width: 25%; }
       body .main .gallery img {
         width: 100%;
-        height: 360px; }
+        height: auto;
+        display: block; }
       body .main .gallery img:hover {
         opacity: 0.7;
         cursor: pointer; }

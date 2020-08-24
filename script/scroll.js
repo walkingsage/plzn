@@ -29,3 +29,5 @@ nav.find('a').on('click', function () {
   
   return false;
 });
+
+jQuery(function($){$("#number").mask("+7-(999)-999-99-99");});
