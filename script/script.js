@@ -299,6 +299,5 @@ closeBurger.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', () => {
-    screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu));
+    screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
 });
- screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu));
