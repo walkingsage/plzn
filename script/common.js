@@ -1,14 +1,13 @@
-﻿$( document ).ready(function() {
-    var sizer = '.sizer4';
+﻿// $( document ).ready(function() {
+// 	let sizer = $('.sizer');
 
-    var container = $('#photos');
+// 	let container = $('#photos');
 
-    container.imagesLoaded(function(){
-    	container.masonry({
-    		itemSelector: '.item',
-    		columnWidth: sizer,
-    		percentPosition: true
-    	});
-    });
-});
+//     container.imagesLoaded(function(){
+//     	$('.gallery').masonry({
+// 			itemSelector: '.grid-item',
+// 			columnWidth: 160
+// 		  });
+// 	});
+// });
 

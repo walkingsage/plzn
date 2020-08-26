@@ -17,11 +17,15 @@ prev = document.querySelector('.prev'),
 next = document.querySelector('.next'),
 close = document.querySelector('.close'),
 header = document.querySelector('.header__nav'),
-galleryFood = document.querySelectorAll('.gallery__food > .item > img'),
-galleryFitnes = document.querySelectorAll('.gallery__fitnes > .item > img'),
+galleryFood = document.querySelectorAll('.gallery > .gallery__food > img'),
+galleryFitnes = document.querySelectorAll('.gallery > .gallery__fitnes > img'),
 anchors = document.querySelectorAll('a[href*="#"]'),
 nameInput = document.querySelector('.input__name'),
-navigation = document.querySelectorAll('ul > a');
+navigation = document.querySelectorAll('ul > a'),
+faDown = document.querySelector('.fa-down'),
+sectionsId = document.querySelectorAll('section');
+
+let navIndex = 0;
 
 const hide = function(elem){
     elem.style.display = 'none';
@@ -82,6 +86,37 @@ const zoomFood = () => {
     src = galleryFood[index].getAttribute('src');
     sliderImg.src = src;
 };
+
+navigation.forEach(elem => {
+    elem.addEventListener('click',() => {
+        let navId = elem.getAttribute('href');
+        for(let i=0;i<navigation.length;i++){
+            if (navId == navigation[i].getAttribute('href')){
+                navIndex = i;
+            }
+            else{
+                continue;
+            }
+        }
+        hideSection();
+        window.scroll(top);
+    });
+});
+
+let hideSection = () => {
+    sectionsId.forEach(elem => {
+        for(let i=0;i<sectionsId.length;i++){
+            if(i == navIndex){
+                show(sectionsId[i]);
+            }
+            else{
+                hide(sectionsId[i]);
+            }
+        }
+    });
+};
+
+hideSection();
 
 
 galleryFood.forEach((element) => {
@@ -208,7 +243,7 @@ next.addEventListener('click',() => {
 close.addEventListener('click',() => {
     slider.style.animation = 'hide 2s ease-out forwards';
     setTimeout(() => {
-        hide(slider);  
+        hide(slider); 
       }, 2000);
     scrollOn();
     header.style.animation = 'headerShow 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
@@ -218,7 +253,7 @@ toFitness.addEventListener('click', () => {
     Food.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     setTimeout(() => {
         hide(Food);
-        show(Fitnes);  
+        Fitnes.style.display = 'block';  
       }, 1000);
     Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     toFitness.classList.add('active');
@@ -234,8 +269,10 @@ fitnesChoise.addEventListener('click', () => {
     Food.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     setTimeout(() => {
         hide(Food);
-        show(Fitnes);  
+        Fitnes.style.display = 'block';   
       }, 1000);
+    navIndex = 2;
+    hideSection();
     Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     toFitness.classList.add('active');
     toFood.classList.remove('active');
@@ -249,7 +286,7 @@ fitnesChoise.addEventListener('click', () => {
 toFood.addEventListener('click', () => {
     Fitnes.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     setTimeout(() => {
-        show(Food);
+        Food.style.display = 'block';
         hide(Fitnes);  
       }, 1000);
     Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
@@ -265,9 +302,11 @@ toFood.addEventListener('click', () => {
 foodChoise.addEventListener('click', () => {
     Fitnes.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     setTimeout(() => {
-        show(Food);
+        Food.style.display = 'block';
         hide(Fitnes);  
       }, 1000);
+    navIndex = 2;
+    hideSection();
     Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     colorFitness(galleryTitle);
     gallerySubFit.style.display = 'none';
@@ -287,6 +326,10 @@ menuBurger.addEventListener('click', () => {
     scrollOf();
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+    screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
+});
+
 closeBurger.addEventListener('click', () => {
     menuBurger.classList.remove('burgerOff');
     menuBurger.classList.add('burgerOn');
@@ -301,3 +344,6 @@ closeBurger.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
 });
+
+
+
