@@ -145,37 +145,68 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     background: #ffffff;
-    overflow: hidden; }
+    overflow: hidden;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom !important; }
     body .header a {
-      display: grid;
       text-decoration: none;
       z-index: 3; }
-      body .header a .fitnes__to, body .header a .food__to {
-        z-index: 4;
-        display: none;
-        position: absolute;
-        font-weight: 800;
-        color: #000000;
-        text-transform: uppercase;
-        font-size: 2.75em;
-        align-self: center;
-        justify-self: center;
-        text-align: center;
-        max-height: 100%; }
-      body .header a img {
-        z-index: 2;
-        max-width: 100%;
+      body .header a .fitness__choise__content {
+        position: relative;
+        display: grid;
         width: 100%;
-        max-height: 100vh;
-        align-self: end; }
+        height: 100%; }
+        body .header a .fitness__choise__content .fitnes__to {
+          z-index: 4;
+          display: none;
+          position: absolute;
+          font-weight: 800;
+          color: #000000;
+          text-transform: uppercase;
+          font-size: 2.75em;
+          align-self: center;
+          justify-self: center;
+          text-align: center;
+          max-height: 100%; }
+        body .header a .fitness__choise__content img {
+          z-index: 2;
+          max-width: 100%;
+          width: 100%;
+          max-height: 100vh;
+          align-self: end; }
+      body .header a .food__choise__content {
+        position: relative;
+        display: grid;
+        width: 100%;
+        height: 100%; }
+        body .header a .food__choise__content .food__to {
+          z-index: 4;
+          display: none;
+          position: absolute;
+          font-weight: 800;
+          color: #000000;
+          text-transform: uppercase;
+          font-size: 2.75em;
+          align-self: center;
+          justify-self: center;
+          text-align: center;
+          max-height: 100%; }
+        body .header a .food__choise__content img {
+          z-index: 2;
+          max-width: 100%;
+          width: 100%;
+          max-height: 100vh;
+          align-self: end; }
     body .header a:hover {
-      position: relative; }
+      position: relative;
+      background: rgba(255, 255, 255, 0.5); }
       body .header a:hover .opac {
         opacity: 0.5; }
       body .header a:hover .fitnes__to, body .header a:hover .food__to {
         display: block;
         opacity: 1;
-        color: #000000; }
+        color: rgba(0, 0, 0, 0.8); }
   body .main {
     box-sizing: border-box; }
     body .main .about__me {
@@ -184,88 +215,93 @@ body {
       background-size: cover;
       min-height: 100vh; }
       body .main .about__me .about__me__content {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 10px;
+        padding-top: 70px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        color: #ffffff;
+        text-align: center; }
+        body .main .about__me .about__me__content .subtitle {
+          margin: 10px auto 10px auto; }
+        body .main .about__me .about__me__content .name {
+          font-size: 0.875em;
+          display: grid;
+          grid-template-columns: 40% 20% 40%;
+          align-items: center; }
+          body .main .about__me .about__me__content .name .line {
+            width: 20%;
+            height: 1px;
+            background-color: #ffffff; }
+          body .main .about__me .about__me__content .name .line:first-child {
+            justify-self: end; }
+          body .main .about__me .about__me__content .name .line:last-child {
+            justify-self: start; }
+      body .main .about__me .about__me__main {
         display: grid;
-        grid-row-gap: 2vh;
-        padding-top: 70px; }
-        body .main .about__me .about__me__content .top {
+        grid-template-columns: 41.3846153846% 16.4615384615% 41.3846153846%;
+        grid-column-gap: 0.5555555556%;
+        justify-items: center;
+        align-self: end;
+        margin-top: auto;
+        margin: auto auto 0 auto;
+        width: 100%; }
+        body .main .about__me .about__me__main a {
           display: grid;
-          grid-row-gap: 10px;
-          color: #ffffff;
-          font-family: 'Code Pro Regular';
-          text-align: center; }
-          body .main .about__me .about__me__content .top .name {
-            font-size: 0.875em;
-            display: grid;
-            grid-template-columns: 44% 11% 44%;
-            align-items: center; }
-            body .main .about__me .about__me__content .top .name .line {
-              width: 20%;
-              height: 1px;
-              background-color: #ffffff; }
-            body .main .about__me .about__me__content .top .name .line:first-child {
-              justify-self: end; }
-            body .main .about__me .about__me__content .top .name .line:last-child {
-              justify-self: start; }
-        body .main .about__me .about__me__content .about__me__main {
-          display: grid;
-          grid-template-columns: 41.3846153846% 16.4615384615% 41.3846153846%;
-          grid-column-gap: 0.5555555556%;
+          border: 2px solid #ffffff;
+          border-radius: 50px;
+          width: 70px;
+          height: 70px;
           justify-items: center;
-          align-self: end; }
-          body .main .about__me .about__me__content .about__me__main a {
-            display: grid;
-            border: 2px solid #ffffff;
-            border-radius: 50px;
-            width: 70px;
-            height: 70px;
-            justify-items: center;
-            align-items: center;
-            text-decoration: none; }
-          body .main .about__me .about__me__content .about__me__main .socials {
-            box-sizing: border-box; }
-          body .main .about__me .about__me__content .about__me__main a:hover {
-            border-color: #00FFE5; }
-            body .main .about__me .about__me__content .about__me__main a:hover .fa {
-              color: #00FFE5; }
-          body .main .about__me .about__me__content .about__me__main .button {
-            width: 55.7620817844%;
-            height: 60px;
-            align-self: center;
-            text-decoration: none;
-            font-size: 1.4375em;
-            text-decoration: none;
-            color: #ffffff; }
-          body .main .about__me .about__me__content .about__me__main .button:hover {
-            border-color: #00ffe5;
-            color: #00ffe5; }
-          body .main .about__me .about__me__content .about__me__main .top__socials {
-            align-self: end;
-            margin-bottom: 30px; }
-          body .main .about__me .about__me__content .about__me__main .bottom__socials {
-            align-self: start;
-            margin-top: 30px; }
-          body .main .about__me .about__me__content .about__me__main .fa {
-            color: #ffffff;
-            font-size: 1.875em; }
-          body .main .about__me .about__me__content .about__me__main .left {
+          align-items: center;
+          text-decoration: none; }
+        body .main .about__me .about__me__main .socials {
+          box-sizing: border-box; }
+        body .main .about__me .about__me__main a:hover {
+          border-color: #00FFE5; }
+          body .main .about__me .about__me__main a:hover .fa {
+            color: #00FFE5; }
+        body .main .about__me .about__me__main .button {
+          width: 55.7620817844%;
+          height: 60px;
+          align-self: center;
+          text-decoration: none;
+          font-size: 1.4375em;
+          text-decoration: none;
+          color: #ffffff; }
+        body .main .about__me .about__me__main .button:hover {
+          border-color: #00ffe5;
+          color: #00ffe5; }
+        body .main .about__me .about__me__main .top__socials {
+          align-self: end;
+          margin-bottom: 30px; }
+        body .main .about__me .about__me__main .bottom__socials {
+          align-self: start;
+          margin-top: 30px; }
+        body .main .about__me .about__me__main .fa {
+          color: #ffffff;
+          font-size: 1.875em; }
+        body .main .about__me .about__me__main .left {
+          width: 100%;
+          grid-area: 1/1/2/2;
+          display: grid;
+          justify-items: center;
+          align-items: center; }
+        body .main .about__me .about__me__main .center {
+          display: grid;
+          width: 100%; }
+          body .main .about__me .about__me__main .center img {
+            grid-area: 1/2/2/3;
             width: 100%;
-            grid-area: 1/1/2/2;
-            display: grid;
-            justify-items: center;
-            align-items: center; }
-          body .main .about__me .about__me__content .about__me__main .center {
-            display: grid;
-            width: 100%; }
-            body .main .about__me .about__me__content .about__me__main .center img {
-              grid-area: 1/2/2/3;
-              width: 100%;
-              align-self: end; }
-          body .main .about__me .about__me__content .about__me__main .right {
-            width: 100%;
-            grid-area: 1/3/2/4;
-            display: grid;
-            justify-items: center;
-            align-items: center; }
+            justify-self: center;
+            align-self: end; }
+        body .main .about__me .about__me__main .right {
+          width: 100%;
+          grid-area: 1/3/2/4;
+          display: grid;
+          justify-items: center;
+          align-items: center; }
     body .main .zoom {
       background-color: rgba(145, 144, 144, 0.5);
       display: grid;
@@ -312,7 +348,7 @@ body {
       padding-top: 70px; }
       body .main .gallery__title .gallery__title__main {
         display: grid;
-        grid-template-rows: 48px 58px 108px;
+        grid-template-rows: 48px auto 108px;
         grid-row-gap: 15px; }
         body .main .gallery__title .gallery__title__main .gallery__sub__food {
           font-weight: 600;
@@ -468,7 +504,7 @@ body {
   body .footer {
     height: 85px;
     display: grid;
-    grid-template-rows: 40px 40px;
+    grid-template-rows: 50% 50%;
     grid-row-gap: 5px; }
     body .footer .name {
       color: #000000;
@@ -479,7 +515,7 @@ body {
       text-decoration: none;
       color: #00ffe5;
       text-transform: uppercase;
-      font-size: 0.75em;
+      font-size: 0.55em;
       align-self: start;
       text-align: center; }
 

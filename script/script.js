@@ -24,11 +24,22 @@ nameInput = document.querySelector('.input__name'),
 navigation = document.querySelectorAll('ul > a'),
 faDown = document.querySelector('.fa-down'),
 sectionsId = document.querySelectorAll('section'),
-svyaz = document.querySelector('.svyaz'),
-galleryTo = document.querySelector('.to__gallery');
+svyaz = document.querySelectorAll('.svyaz'),
+gallery = document.querySelector('.gallery'),
+galleryTo = document.querySelectorAll('.to__gallery');
 
 let navIndex = 0;
 window.scrollTo(0,1000);
+
+var t;
+function up() {
+	var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+	if(top > 0) {
+		window.scrollBy(0,-100);
+		t = setTimeout('up()',20);
+	} else clearTimeout(t);
+	return false;
+}
 
 const hide = function(elem){
     elem.style.display = 'none';
@@ -110,12 +121,15 @@ let hideSection = () => {
     sectionsId.forEach(elem => {
         for(let i=0;i<sectionsId.length;i++){
             if(i == navIndex){
-                show(sectionsId[i]); 
+                show(sectionsId[i]);
+                navigation[i].classList.add('active');
             }
             else{
                 hide(sectionsId[i]);
+                navigation[i].classList.remove('active');
             }
         }
+        up();
     });
 };
 
@@ -176,19 +190,20 @@ for (let anchor of anchors) {
     });
   };
 
-svyaz.addEventListener('click', () => {
-    navIndex = 3;
-    hideSection();
-    console.log('work');
-    
-    window.scrollTo(0,1000);
+svyaz.forEach(element => {
+    element.addEventListener('click', () => {
+        navIndex = 3;
+        hideSection();
+        // window.scrollTo(0,1000);
+    });
 });
 
-galleryTo.addEventListener('click', () => {
-    navIndex = 2;
-    hideSection();
-    
-    window.scrollTo(0,1000);
+galleryTo.forEach(element => {
+    element.addEventListener('click', () => {
+        navIndex = 2;
+        hideSection();
+        // window.scrollTo(0,1000);
+    });
 });
 
 prev.addEventListener('click',() => {
@@ -275,6 +290,7 @@ toFitness.addEventListener('click', () => {
         Fitnes.style.display = 'block'; 
         hide(Food);
       }, 1000);
+    gallery.style.background = '#000000';
     Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     colorFood(galleryTitle);
     gallerySubFood.style.display = 'none';
@@ -293,6 +309,7 @@ fitnesChoise.addEventListener('click', () => {
       }, 1000);
     navIndex = 2;
     hideSection();
+    gallery.style.background = '#000000';
     Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     toFitness.classList.add('active');
     toFood.classList.remove('active');
@@ -309,6 +326,7 @@ toFood.addEventListener('click', () => {
         Food.style.display = 'block';
         hide(Fitnes);  
       }, 1000);
+    gallery.style.background = '#ffffff';
     Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     colorFitness(galleryTitle);
     gallerySubFit.style.display = 'none';
@@ -327,6 +345,7 @@ foodChoise.addEventListener('click', () => {
       }, 1000);
     navIndex = 2;
     hideSection();
+    gallery.style.background = '#ffffff';
     Food.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     colorFitness(galleryTitle);
     gallerySubFit.style.display = 'none';
@@ -347,23 +366,26 @@ menuBurger.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function(){
-    screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
+    screen.width < 652 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
 });
 
 closeBurger.addEventListener('click', () => {
     menuBurger.classList.remove('burgerOff');
     menuBurger.classList.add('burgerOn');
     menu.style.animation = 'closeNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+    closeBurger.style.display = 'none';
     setTimeout(() => {
         hide(menu);  
       }, 1000);
-    closeBurger.style.display = 'none';
     scrollOn();
 });
 
 window.addEventListener('resize', () => {
     screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
 });
+
+
+
 
 
 
