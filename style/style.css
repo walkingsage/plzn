@@ -44,7 +44,8 @@
   max-width: 90.2777777778%;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 
 .bold {
   font-weight: 600; }
@@ -329,18 +330,20 @@ body {
           body .main .gallery__title .gallery__title__main .choise a:hover {
             color: #00ffe5; }
     body .main .gallery {
-      max-height: 100vh;
+      height: 100vh;
       overflow: scroll;
       overflow-x: hidden;
       background-color: #000000; }
       body .main .gallery .gallery__fitnes {
         width: 100%;
         columns: 4;
-        column-gap: 0; }
+        column-gap: 0;
+        min-height: 100vh; }
       body .main .gallery .gallery__food {
         width: 100%;
         columns: 4;
-        column-gap: 0; }
+        column-gap: 0;
+        min-height: 100vh; }
       body .main .gallery img {
         max-width: 100%;
         height: auto;
@@ -351,11 +354,11 @@ body {
     body .main #contact {
       background-color: #000000;
       padding-top: 70px;
-      padding-bottom: 70px;
       min-height: 100vh; }
       body .main #contact .contact__main {
         display: grid;
-        grid-row-gap: 38px; }
+        grid-row-gap: 38px;
+        width: 100%; }
         body .main #contact .contact__main #contact__form .fields {
           display: grid;
           grid-template-columns: 50% 50%;

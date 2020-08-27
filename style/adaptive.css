@@ -125,9 +125,6 @@
     font-size: 1.125em !important;
     width: 80% !important; }
 
-  .gallery {
-    height: 520px !important; }
-
   .gallery__fitnes {
     columns: 3 !important; }
 
@@ -314,9 +311,6 @@
 
   .gallery__title__main {
     grid-template-rows: 25px 40px 60px !important; }
-
-  .gallery {
-    height: 370px !important; }
 
   .fields {
     grid-template-columns: 100% !important;

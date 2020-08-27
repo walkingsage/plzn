@@ -23,9 +23,12 @@ anchors = document.querySelectorAll('a[href*="#"]'),
 nameInput = document.querySelector('.input__name'),
 navigation = document.querySelectorAll('ul > a'),
 faDown = document.querySelector('.fa-down'),
-sectionsId = document.querySelectorAll('section');
+sectionsId = document.querySelectorAll('section'),
+svyaz = document.querySelector('.svyaz'),
+galleryTo = document.querySelector('.to__gallery');
 
 let navIndex = 0;
+window.scrollTo(0,1000);
 
 const hide = function(elem){
     elem.style.display = 'none';
@@ -99,7 +102,7 @@ navigation.forEach(elem => {
             }
         }
         hideSection();
-        window.scroll(top);
+        window.scrollTo(0,1000);
     });
 });
 
@@ -107,7 +110,7 @@ let hideSection = () => {
     sectionsId.forEach(elem => {
         for(let i=0;i<sectionsId.length;i++){
             if(i == navIndex){
-                show(sectionsId[i]);
+                show(sectionsId[i]); 
             }
             else{
                 hide(sectionsId[i]);
@@ -117,6 +120,8 @@ let hideSection = () => {
 };
 
 hideSection();
+
+
 
 
 galleryFood.forEach((element) => {
@@ -170,6 +175,21 @@ for (let anchor of anchors) {
       });
     });
   };
+
+svyaz.addEventListener('click', () => {
+    navIndex = 3;
+    hideSection();
+    console.log('work');
+    
+    window.scrollTo(0,1000);
+});
+
+galleryTo.addEventListener('click', () => {
+    navIndex = 2;
+    hideSection();
+    
+    window.scrollTo(0,1000);
+});
 
 prev.addEventListener('click',() => {
     if(toFitness.classList.contains('active')){
@@ -251,25 +271,25 @@ close.addEventListener('click',() => {
 
 toFitness.addEventListener('click', () => {
     Food.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
-    setTimeout(() => {
+    setTimeout(() => {   
+        Fitnes.style.display = 'block'; 
         hide(Food);
-        Fitnes.style.display = 'block';  
       }, 1000);
     Fitnes.style.animation = 'show 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
-    toFitness.classList.add('active');
-    toFood.classList.remove('active');
     colorFood(galleryTitle);
     gallerySubFood.style.display = 'none';
     gallerySubFit.style.display = 'block';
     galleryTit.style.color = '#ffffff';
+    toFitness.classList.add('active');
+    toFood.classList.remove('active');
     toFood.style.color = '#ffffff';
 });
 
 fitnesChoise.addEventListener('click', () => {
     Food.style.animation = 'hide 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
     setTimeout(() => {
-        hide(Food);
-        Fitnes.style.display = 'block';   
+        Fitnes.style.display = 'block';
+        hide(Food);   
       }, 1000);
     navIndex = 2;
     hideSection();
