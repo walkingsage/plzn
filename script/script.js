@@ -26,7 +26,8 @@ faDown = document.querySelector('.fa-down'),
 sectionsId = document.querySelectorAll('section'),
 svyaz = document.querySelectorAll('.svyaz'),
 gallery = document.querySelector('.gallery'),
-galleryTo = document.querySelectorAll('.to__gallery');
+galleryTo = document.querySelectorAll('.to__gallery'),
+logo = document.querySelector('.logo');
 
 let navIndex = 0;
 window.scrollTo(0,1000);
@@ -250,6 +251,11 @@ sliderImg.addEventListener('click', () => {
             zoomFood();
         }
     }
+});
+
+logo.addEventListener('click', () => {
+    navIndex = 0;
+    hideSection();
 });
 
 next.addEventListener('click',() => {

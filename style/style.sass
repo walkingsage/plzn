@@ -478,22 +478,32 @@ body
 
         #contact
             background-color: #000000
-            padding-top: 70px
             // padding-bottom: 70px
             min-height: 100vh
 
             .contact__main  
-                display: grid
+                display: flex
+                flex-direction: column
                 grid-row-gap: 38px
+                box-sizing: border-box
+                min-height: 100vh
+                padding-top: 70px
+                padding-bottom: 30px
                 width: 100%
 
+                .subtitle
+                    margin: 0 auto
+
                 #contact__form
+                    margin: auto 0
                     
                     .fields
                         display: grid
                         grid-template-columns: 50% 50%
                         grid-template-rows: 60px 120px 20px 100px 60px
                         grid-row-gap: 30px
+                        margin: auto auto 0 auto
+                        max-width: 1206px
 
                     .input
                         border: 2px solid #ffffff
