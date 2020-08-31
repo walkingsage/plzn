@@ -128,8 +128,8 @@ body {
         display: none; }
       body .header__nav .nav__content nav ul {
         list-style: none;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        justify-content: space-around;
         text-align: right;
         text-transform: uppercase; }
         body .header__nav .nav__content nav ul a {
@@ -208,7 +208,8 @@ body {
         opacity: 1;
         color: rgba(0, 0, 0, 0.8); }
   body .main {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    position: relative; }
     body .main .about__me {
       background-color: #000000;
       background-image: url(../img/aboutme.jpg);
@@ -402,14 +403,17 @@ body {
         body .main #contact .contact__main .subtitle {
           margin: 0 auto; }
         body .main #contact .contact__main #contact__form {
-          margin: auto 0; }
+          margin: auto 0;
+          position: relative;
+          display: grid; }
           body .main #contact .contact__main #contact__form .fields {
             display: grid;
             grid-template-columns: 50% 50%;
             grid-template-rows: 60px 120px 20px 100px 60px;
             grid-row-gap: 30px;
             margin: auto auto 0 auto;
-            max-width: 1206px; }
+            max-width: 1206px;
+            width: 100%; }
           body .main #contact .contact__main #contact__form .input {
             border: 2px solid #ffffff;
             border-radius: 50px;
@@ -460,6 +464,8 @@ body {
               border-radius: 50%; }
             body .main #contact .contact__main #contact__form .submit__data p {
               color: #ffffff; }
+            body .main #contact .contact__main #contact__form .submit__data a:hover {
+              cursor: pointer; }
           body .main #contact .contact__main #contact__form .contact__socials {
             grid-area: 4/1/5/3;
             display: grid;
@@ -511,6 +517,109 @@ body {
             border-color: #00ffe5;
             color: #00ffe5;
             cursor: pointer; }
+          body .main #contact .contact__main #contact__form .note {
+            position: absolute;
+            display: grid;
+            background: white;
+            align-self: center;
+            justify-self: center;
+            grid-row-gap: 20px;
+            padding: 20px 0 20px 0;
+            justify-items: center;
+            color: #000000;
+            border-radius: 110px; }
+            body .main #contact .contact__main #contact__form .note .title {
+              color: #000000; }
+            body .main #contact .contact__main #contact__form .note .subtitle {
+              color: #303030; }
+            body .main #contact .contact__main #contact__form .note .socials {
+              border-color: #00ffe5;
+              width: 50px;
+              height: 50px; }
+            body .main #contact .contact__main #contact__form .note .fa {
+              color: #00ffe5; }
+  body .politika {
+    z-index: 70;
+    background-color: white;
+    position: fixed;
+    display: grid;
+    flex-direction: column;
+    max-height: 100vh;
+    top: 0; }
+    body .politika i {
+      justify-self: end;
+      margin-right: 2.5%;
+      margin-top: 20px;
+      font-size: 1.875em;
+      position: absolute; }
+    body .politika i:hover {
+      cursor: pointer;
+      color: #00ffe5; }
+    body .politika .politika__main {
+      max-height: 100vh;
+      overflow: scroll;
+      padding-top: 40px;
+      box-sizing: border-box; }
+      body .politika .politika__main .title {
+        color: #000000; }
+      body .politika .politika__main .soglashenie {
+        margin: 30px 0 0 20px;
+        box-sizing: border-box; }
+        body .politika .politika__main .soglashenie ol {
+          display: grid;
+          grid-row-gap: 20px;
+          font-family: 'Montserrat', sans-serif;
+          list-style: none;
+          counter-reset: li; }
+          body .politika .politika__main .soglashenie ol .inner {
+            margin-left: 10px;
+            margin-top: 10px;
+            grid-row-gap: 10px; }
+          body .politika .politika__main .soglashenie ol li:before {
+            counter-increment: li;
+            content: counters(li,".") ". "; }
+        body .politika .politika__main .soglashenie .bottom__text {
+          margin-top: 30px;
+          text-align: center; }
+  body .obrabotka {
+    z-index: 70;
+    background-color: white;
+    position: fixed;
+    display: grid;
+    flex-direction: column;
+    max-height: 100vh;
+    top: 0; }
+    body .obrabotka i {
+      justify-self: end;
+      margin-right: 2.5%;
+      margin-top: 20px;
+      font-size: 1.875em;
+      position: absolute; }
+    body .obrabotka i:hover {
+      cursor: pointer;
+      color: #00ffe5; }
+    body .obrabotka .obrabotka__main {
+      max-height: 100vh;
+      overflow: scroll;
+      padding-top: 40px;
+      box-sizing: border-box; }
+      body .obrabotka .obrabotka__main .title {
+        color: #000000; }
+      body .obrabotka .obrabotka__main .soglashenie {
+        margin: 30px 0 0 20px;
+        box-sizing: border-box; }
+        body .obrabotka .obrabotka__main .soglashenie ol {
+          display: grid;
+          grid-row-gap: 20px;
+          font-family: 'Montserrat', sans-serif; }
+          body .obrabotka .obrabotka__main .soglashenie ol ul {
+            display: grid;
+            grid-row-gap: 30px;
+            margin-top: 30px;
+            margin-left: 20px; }
+        body .obrabotka .obrabotka__main .soglashenie .bottom__text {
+          margin-top: 30px;
+          text-align: center; }
   body .footer {
     height: 85px;
     display: grid;
@@ -528,5 +637,7 @@ body {
       font-size: 0.55em;
       align-self: start;
       text-align: center; }
+    body .footer a:hover {
+      cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

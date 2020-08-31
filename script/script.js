@@ -27,10 +27,15 @@ sectionsId = document.querySelectorAll('section'),
 svyaz = document.querySelectorAll('.svyaz'),
 gallery = document.querySelector('.gallery'),
 galleryTo = document.querySelectorAll('.to__gallery'),
-logo = document.querySelector('.logo');
+logo = document.querySelector('.logo'),
+politika = document.querySelector('.politika'),
+politicaClose = document.querySelector('.close__politika'),
+obrabotka = document.querySelector('.obrabotka'),
+closeObrabotka = document.querySelector('.close__obrabotka'),
+toSoglash = document.getElementById('to__soglashenie'),
+toPolit = document.getElementById('to__politika');
 
 let navIndex = 0;
-window.scrollTo(0,1000);
 
 var t;
 function up() {
@@ -175,6 +180,16 @@ navigation.forEach((element) => {
     element.addEventListener('click', () => {
         remactive();
         element.classList.add('active');
+        if (screen.width < 651){
+            menuBurger.classList.remove('burgerOff');
+            menuBurger.classList.add('burgerOn');
+            closeBurger.style.display = 'none';
+            menu.style.animation = 'closeNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards';
+            setTimeout(() => {
+                hide(menu);  
+            }, 1000);
+            scrollOn();
+        }
     });
 });
 
@@ -199,6 +214,7 @@ svyaz.forEach(element => {
     });
 });
 
+
 galleryTo.forEach(element => {
     element.addEventListener('click', () => {
         navIndex = 2;
@@ -206,6 +222,8 @@ galleryTo.forEach(element => {
         // window.scrollTo(0,1000);
     });
 });
+
+
 
 prev.addEventListener('click',() => {
     if(toFitness.classList.contains('active')){
@@ -256,6 +274,34 @@ sliderImg.addEventListener('click', () => {
 logo.addEventListener('click', () => {
     navIndex = 0;
     hideSection();
+});
+
+toPolit.addEventListener('click', () => {
+    header.style.animation = 'headerHide 5s cubic-bezier(0.26, 0.45, 0.6, 0.93) forwards';
+    show(politika);
+    politika.style.animation = 'show 2s ease-out forwards';
+});
+
+politicaClose.addEventListener('click', () => {
+    header.style.animation = 'headerShow 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
+    politika.style.animation = 'hide 2s ease-out forwards'; 
+    setTimeout(() => {
+        hide(politika);
+      }, 2000);
+});
+
+toSoglash.addEventListener('click', () => {
+    header.style.animation = 'headerHide 5s cubic-bezier(0.26, 0.45, 0.6, 0.93) forwards';
+    show(obrabotka);
+    obrabotka.style.animation = 'show 2s ease-out forwards';
+});
+
+closeObrabotka.addEventListener('click', () => {
+    header.style.animation = 'headerShow 2s cubic-bezier(0, 1.1, 0.58, 1) forwards';
+    obrabotka.style.animation = 'hide 2s ease-out forwards'; 
+    setTimeout(() => {
+        hide(obrabotka);
+      }, 2000);
 });
 
 next.addEventListener('click',() => {
@@ -372,7 +418,7 @@ menuBurger.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function(){
-    screen.width < 652 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
+    screen.width < 652 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu));
 });
 
 closeBurger.addEventListener('click', () => {
@@ -389,7 +435,6 @@ closeBurger.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     screen.width < 650 ? (hide(menu),menuBurger.classList.remove('burgerOff'),menuBurger.classList.add('burgerOn')): (menuBurger.classList.remove('burgerOn'),menuBurger.classList.add('burgerOff'),show(menu),menu.style.animation = 'openNav 1s cubic-bezier(0.51, 0.8, 0.77, 0.99) forwards');
 });
-
 
 
 
