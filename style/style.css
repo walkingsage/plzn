@@ -384,7 +384,8 @@ body {
       body .main .gallery img {
         max-width: 100%;
         height: auto;
-        display: block; }
+        display: block;
+        width: 100%; }
       body .main .gallery img:hover {
         opacity: 0.7;
         cursor: pointer; }
@@ -564,13 +565,16 @@ body {
         color: #000000; }
       body .politika .politika__main .soglashenie {
         margin: 30px 0 0 20px;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        text-align: center; }
         body .politika .politika__main .soglashenie ol {
           display: grid;
           grid-row-gap: 20px;
           font-family: 'Montserrat', sans-serif;
           list-style: none;
-          counter-reset: li; }
+          counter-reset: li;
+          margin-top: 20px;
+          text-align: left; }
           body .politika .politika__main .soglashenie ol .inner {
             margin-left: 10px;
             margin-top: 10px;

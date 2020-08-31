@@ -193,18 +193,17 @@ navigation.forEach((element) => {
     });
 });
 
-for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+// for (let anchor of anchors) {
+//     anchor.addEventListener('click', function (e) {
+//       e.preventDefault();
       
-      const blockID = anchor.getAttribute('href').substr(1);
+//       const blockID = anchor.getAttribute('href').substr(1);
       
-      document.getElementById(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  };
+//       document.getElementById(blockID).scrollIntoView({
+//           block: 'start'
+// //       });
+////     });
+////   };
 
 svyaz.forEach(element => {
     element.addEventListener('click', () => {

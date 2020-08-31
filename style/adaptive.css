@@ -27,11 +27,25 @@
   .button {
     height: 80px !important; }
 
+  .about__me__content {
+    padding-top: 100px !important; }
+
   .gallery__title {
     padding-top: 100px !important; }
 
   .gallery__title__main {
     grid-template-rows: 60px auto 150px !important; }
+
+  .gallery__fitnes {
+    columns: 5 !important;
+    column-width: 100%; }
+
+  .gallery__food {
+    columns: 5 !important;
+    column-width: 100%; }
+
+  .contact__main {
+    padding-top: 100px !important; }
 
   .fields {
     grid-template-rows: 110px 140px 40px 120px 100px !important; }
@@ -86,11 +100,12 @@
 
   .fields {
     grid-template-rows: 50px 90px 20px 60px 50px !important;
-    grid-row-gap: 20px !important; }
+    grid-row-gap: 20px !important;
+    max-width: 800px !important; }
 
   .contact__socials .socials {
-    width: 50px !important;
-    height: 50px !important; }
+    width: 60px !important;
+    height: 60px !important; }
 
   .footer {
     height: 50px; }
