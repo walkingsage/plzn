@@ -367,6 +367,16 @@
     //footer
 }
 
+@media (min-width: 652px){
+    #fitness__choise{
+        background: hsla(0, 0%, 0%, 0) !important;
+    }
+
+    #food__choise{
+        background: hsla(0, 0%, 0%, 0) !important;
+    }
+}
+
 
 
 @media (max-width: 650px){
@@ -408,14 +418,12 @@
     }
     #fitness__choise{
         position: relative;
-        background-image: url(../img/test.jpg);
         background-size: cover;
         background-position: center center;
     }
 
     #food__choise{
         position: relative;
-        background-image: url(../img/fpic5.jpg);
         background-size: cover;
         background-position: center center;
     }
